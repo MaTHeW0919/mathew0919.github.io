@@ -253,18 +253,33 @@ body.dark {
   box-shadow: 0 0 25px rgba(46, 36, 150, 0.6);
 }
 
-.card img.Ahh-image{
-  padding: 5px;
-  height: 200px;
-  width: 200px;
+.card img.Ahh-image {
+  width: calc(50% - 10px); 
+  max-width: 200px;        
+  height: 150px;          
+  object-fit: cover;      
+  border-radius: 12px;
+  padding: 20px;             
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-.card details {
+
+.card details summary {
+  padding: 12px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 15px;
-  padding: 15px;
-  box-shadow: 0 0 20px rgba(59, 83, 202, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  list-style: none;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+@media (min-width: 768px) {
+  .card img.Ahh-image {
+    width: 200px; 
+  }
 }
 
 .card details:hover {
@@ -377,3 +392,4 @@ body.dark {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
